@@ -72,21 +72,28 @@
    <script src='assets/js/main.js'></script>
    <script src='assets/js/demo.js'></script>
 
-   <audio autoplay="" loop="" id="player">
-</audio>
+<audio autoplay loop id="backgroundMusic"> 
+          <source src=".assets//music/song.mp3" type="audio/mpeg"> 
+      </audio>
 
-
+<script type="2a6cba4899ef425f1307262d-text/javascript">
+        // Zac's custom random background //
+        getsetbg();
+        function getsetbg() {
+            var imageUrls = ["./assets/bg1.gif", "./assets/bg2.gif", "./assets/bg3.gif","./assets/bg4.gif", "./assets/bg5.gif"]
+            var dqpzo = Math.floor(Math.random()*imageUrls.length);
+            $("html, body").css("background-image", "url(" + imageUrls[dqpzo] + ")");
+        }
+    </script>
 </body>
 
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <script language="JavaScript">
-    function scrlsts() {
-        var randNumber = (Math.floor(Math.random() * Math.floor(2)));
-        var sourceDir = "./assets/music/3.mp3";
-        document.getElementById("player").src = sourceDir;
-        document.getElementById("player").volume = 0.2;
-    }
+<script> 
+    var audio = document.getElementById('./assets/music/song.mp3'); //Background music
+    audio.volume = 0.20;
+    audio.play();
+</script>
        
       //////////F12 disable code////////////////////////
           document.onkeypress = function (event) {
